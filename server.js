@@ -6,8 +6,8 @@
 // ==========================================
 
 // Parameters
-var WORLD_SX = 128;
-var WORLD_SY = 128;
+var WORLD_SX = 16;
+var WORLD_SY = 16;
 var WORLD_SZ = 32;
 var WORLD_GROUNDHEIGHT = 16;
 var SECONDS_BETWEEN_SAVES = 60;
@@ -90,7 +90,9 @@ server.on( "chat", function( client, nickname, msg )
 // Send a welcome message to new clients
 server.on( "join", function( client, nickname )
 {
-	server.sendMessage( "Welcome! Enjoy your stay, " + nickname + "!", client );
+	server.sendMessage( "Welcome! Enjoy your stay, <u>" + nickname + "</u>!", client );
+	server.sendMessage( "Server Created by <h1 style='color:green'>Mr.Pepino</h1> ");
+	server.sendMessage( "O simplemente <a style='color:red'>Reyes</a> para los amigos");	
 	server.broadcastMessage( nickname + " joined the game.", client );
 } );
 
